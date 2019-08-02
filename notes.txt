@@ -1,0 +1,6 @@
+
+
+install java se --> v8
+
+winutils chmod 777 c:\PySpark\tmp\hive
+
