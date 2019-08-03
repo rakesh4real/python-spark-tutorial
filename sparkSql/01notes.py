@@ -21,9 +21,11 @@ if __name__ == "__main__":
     responseWithSelectedColumns = responses.select("country", "occupation",
         AGE_MIDPOINT, SALARY_MIDPOINT)
 
+    # OUTPUTS TOP 20 ROWS
     print("=== Print the selected columns of the table ===")
     responseWithSelectedColumns.show()
 
+    
     print("=== Print records where the response is from Afghanistan ===")
     responseWithSelectedColumns\
         .filter(responseWithSelectedColumns["country"] == "Afghanistan").show()
