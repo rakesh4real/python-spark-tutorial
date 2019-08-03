@@ -9,5 +9,5 @@ if __name__ == "__main__":
     wordPairRdd = wordRdd.map(lambda word: (word, 1))
 
     wordCounts = wordPairRdd.reduceByKey(lambda x, y: x + y)
-    for word, count in wordCounts.collect():
+    for word, count in wordCounts.collect(): #cant use 'items' as it can only be used for actions like wordCounts. 'Items' cant be used with lists.. for lists, directly take it
         print("{} : {}".format(word, count))
